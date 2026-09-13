@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+
+  <title>Admin Login — SweetCrumb</title>
+
+  <link
+    rel="stylesheet"
+    href="/admin-login.css"
+  >
+</head>
+
+<body>
+
+  <div class="login-wrap">
+
+    <!-- BRAND -->
+    <div class="brand">
+      Sari<span>Legit</span>
+      <small>ADMIN PORTAL</small>
+    </div>
+
+
+    <!-- LOGIN CARD -->
+    <div class="card">
+
+      <div class="icon">
+        🔐
+      </div>
+
+      <span class="eyebrow">
+        PRIVATE ACCESS
+      </span>
+
+      <h1>
+        Login Admin
+      </h1>
+
+      <p>
+        Masuk untuk mengelola produk, pesanan,
+        stok, dan pelanggan.
+      </p>
+
+
+      <!-- LOGIN FORM -->
+      <form id="loginForm">
+
+        <label for="email">
+          Email Admin
+        </label>
+
+        <input
+          id="email"
+          name="email"
+          type="email"
+          placeholder="admin@sarilegit.com"
+          required
+        >
+
+
+        <label for="password">
+          Password
+        </label>
+
+        <input
+          id="password"
+          name="password"
+          type="password"
+          placeholder="••••••••"
+          required
+        >
+
+
+        <!-- ERROR MESSAGE -->
+        <div id="error"></div>
+
+
+        <button type="submit">
+          Masuk ke Dashboard →
+        </button>
+
+      </form>
+
+
+      <!-- BACK TO STORE -->
+      <a
+        class="back"
+        href="/"
+      >
+        ← Kembali ke toko
+      </a>
+
+    </div>
+
+
+    <!-- DEMO LOGIN -->
+    <small class="demo">
+      Demo admin:
+      admin@sweetcrumb.test · admin123
+    </small>
+
+  </div>
+
+
+  <!-- LOGIN SCRIPT -->
+  <script>
+    const form = document.getElementById("loginForm");
+    const error = document.getElementById("error");
+
+    form.onsubmit = async (event) => {
+      event.preventDefault();
+
+      error.textContent = "";
+
+      try {
+        const response = await fetch("/api/login", {
+          method: "POST",
+
+          headers: {
+            "Content-Type": "application/json"
+          },
+
+          body: JSON.stringify(
+            Object.fromEntries(
+              new FormData(form)
+            )
+          )
+        });
+
+        const data = await response.json();
+
+        if (!response.ok) {
+          throw new Error(
+            data.error || "Login gagal"
+          );
+        }
+
+        /*
+         * Pastikan akun yang login
+         * benar-benar memiliki role admin.
+         */
+        if (data.role !== "admin") {
+
+          await fetch("/api/logout", {
+            method: "POST"
+          });
+
+          throw new Error(
+            "Akun ini bukan akun admin."
+          );
+        }
+
+        /*
+         * Login berhasil,
+         * arahkan ke dashboard admin.
+         */
+        location.href = "/admin.html";
+
+      } catch (err) {
+
+        error.textContent =
+          err.message || "Login gagal";
+
+      }
+    };
+  </script>
+
+</body>
+</html>

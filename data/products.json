@@ -1,0 +1,11 @@
+[
+  {"id":1,"name":"Lapis Legit","category":"Cake","price":45000,"stock":12,"emoji":"🍰","image":"/lapislegit.png","desc":"Kue lapis legit yang lembut dan harum dengan cita rasa manis gurih, berlapis sempurna di setiap gigitan.","active":true},
+  {"id":2,"name":"Brownies Cake","category":"Cake","price":40000,"stock":8,"emoji":"🍫","image":"/brownies.png","desc":"Kue brownies dengan tekstur sangat empuk dan cokelat premium.","active":true},
+  {"id":3,"name":"Lapis Surabaya","category":"Cake","price":50000,"stock":7,"emoji":"🍰","image":"/surabaya.png","desc":"Bolu lembut dengan perpaduan cokelat, vanilla, dan selai premium.","active":true},
+  {"id":4,"name":"Bolu Ketan","category":"Roll","price":50000,"stock":10,"emoji":"🍰","image":"/boluketan.png","desc":"Bolu lembut dengan cita rasa ketan yang gurih, manis, dan legit.","active":true},
+  {"id":5,"name":"Donut's","category":"Pastry","price":3000,"stock":20,"emoji":"🍩","image":"/donat.png","desc":"Donat empuk dengan tekstur fluffy dan topping melimpah.","active":true},
+  {"id":6,"name":"Bolu Gulung","category":"Pastry","price":32000,"stock":20,"emoji":"🍰","image":"/bolugulung.png","desc":"Bolu gulung lembut dengan isian yang nikmat.","active":true},
+  {"id":7,"name":"Talas Ungu","category":"Roll","price":32000,"stock":20,"emoji":"🍠","image":"/talasungu.png","desc":"Bolu talas ungu lembut dengan rasa manis yang pas.","active":true},
+  {"id":8,"name":"Bolu Pisang","category":"Pastry","price":32000,"stock":20,"emoji":"🍌","image":"/bolupisang.png","desc":"Bolu pisang lembut dan harum untuk teman minum teh.","active":true},
+  {"id":9,"name":"Kue Ulang Tahun","category":"Cake","price":65000,"stock":15,"emoji":"","image":"/kueultah.png","desc":"Kue Ulang Tahun yang manis dan menarik.","active":true}
+]

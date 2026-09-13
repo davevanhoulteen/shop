@@ -1,0 +1,14 @@
+{
+  "name": "toko-kue-online",
+  "version": "1.0.0",
+  "description": "Toko kue online SariLegit dengan dashboard admin dan pengelolaan produk",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "express-session": "^1.18.1"
+  }
+}

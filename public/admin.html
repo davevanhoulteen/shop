@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Admin — SariLegit</title>
+<link rel="stylesheet" href="/admin.css">
+</head>
+<body>
+<aside>
+  <div class="logo">Sari<span>Legit</span><small>ADMIN CONSOLE</small></div>
+  <a class="active">📊 Overview</a>
+  <a href="/">🛍️ Lihat Toko</a>
+  <a onclick="logout()">↪ Keluar</a>
+</aside>
+<main>
+  <header><div><span class="eyebrow">DASHBOARD</span><h1>Selamat datang, Admin 👋</h1></div><div class="avatar">SL</div></header>
+  <section class="stats">
+    <div><small>Revenue</small><b id="revenue">-</b><span>total pesanan</span></div>
+    <div><small>Pesanan</small><b id="orders">-</b><span>semua order</span></div>
+    <div><small>Produk</small><b id="products">-</b><span>produk tampil</span></div>
+    <div><small>Pelanggan</small><b id="customers">-</b><span>akun user</span></div>
+  </section>
+  <section class="panel"><div class="panelhead"><h2>Pesanan Terbaru</h2></div><div class="tablewrap"><table><thead><tr><th>ID</th><th>Pelanggan</th><th>Tanggal</th><th>Total</th><th>Status</th><th>Aksi</th></tr></thead><tbody id="orderRows"></tbody></table></div></section>
+  <section class="panel"><div class="panelhead"><div><h2>Kelola Produk</h2><p class="hint">Tambah, edit harga, stok, foto, kategori, deskripsi, dan status tampil produk.</p></div><button class="primary" onclick="showAdd()">+ Produk Baru</button></div><div id="productRows" class="productlist"></div></section>
+</main>
+<div id="modal" class="modal hidden"><div class="modalcard"><button class="closemodal" onclick="closeModal()" aria-label="Tutup">×</button><div id="content"></div></div></div>
+<script src="/admin.js"></script>
+</body>
+</html>

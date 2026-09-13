@@ -1,0 +1,2043 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+
+
+/* ==================================================
+   ROOT
+================================================== */
+
+:root {
+    --ink: #2c211d;
+    --muted: #786b64;
+    --cream: #fff9f2;
+    --peach: #f6d4c3;
+    --pink: #e89d91;
+    --accent: #b65d4e;
+    --white: #ffffff;
+    --line: #eadfd7;
+
+    --shadow:
+        0 15px 35px rgba(98, 69, 54, 0.08);
+
+    --radius-sm: 10px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
+}
+
+
+/* ==================================================
+   RESET
+================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    background: var(--cream);
+    color: var(--ink);
+
+    font-family: "DM Sans", sans-serif;
+
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+img,
+video {
+    max-width: 100%;
+}
+
+button,
+input,
+textarea,
+select {
+    font-family: inherit;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+/* ==================================================
+   NAVBAR
+================================================== */
+
+.topbar {
+    width: 100%;
+    height: 76px;
+
+    padding: 0 6vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #fffdf9;
+
+    border-bottom: 1px solid var(--line);
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+
+    color: var(--ink);
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 26px;
+    font-weight: 700;
+
+    line-height: 1;
+
+    text-decoration: none;
+
+    white-space: nowrap;
+}
+
+.brand span {
+    color: var(--accent);
+}
+
+
+/* ==================================================
+   NAVIGATION
+================================================== */
+
+nav {
+    display: flex;
+    align-items: center;
+
+    gap: 28px;
+}
+
+nav a {
+    color: var(--muted);
+
+    font-size: 14px;
+    font-weight: 500;
+
+    text-decoration: none;
+
+    transition:
+        color 0.2s ease;
+}
+
+nav a:hover {
+    color: var(--accent);
+}
+
+
+/* ==================================================
+   NAV ACTIONS
+================================================== */
+
+.actions {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+}
+
+.ghost,
+.cart {
+    border: 1px solid var(--line);
+
+    background: var(--white);
+
+    border-radius: 12px;
+
+    padding: 10px 15px;
+
+    color: var(--ink);
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.ghost:hover,
+.cart:hover {
+    border-color: #d9c6bc;
+
+    background: #fffaf6;
+
+    transform: translateY(-1px);
+}
+
+.cart b {
+    color: var(--accent);
+
+    margin-left: 3px;
+}
+
+
+/* ==================================================
+   HERO
+================================================== */
+
+.hero {
+    width: 100%;
+
+    min-height: 560px;
+
+    padding: 70px 9vw;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1fr);
+
+    align-items: center;
+
+    /*
+     * Jarak kiri-kanan antara
+     * teks dan foto.
+     */
+    column-gap: 75px;
+
+    /*
+     * Jarak jika layout berubah
+     * menjadi satu kolom.
+     */
+    row-gap: 55px;
+
+    background:
+        linear-gradient(
+            115deg,
+            #fffaf4 0%,
+            #fbe5d9 100%
+        );
+}
+
+
+/* ==================================================
+   HERO COPY
+================================================== */
+
+.hero-copy {
+    width: 100%;
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+}
+
+
+/* ==================================================
+   HERO PILL
+================================================== */
+
+.pill {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 8px 13px;
+
+    background: var(--white);
+
+    border: 1px solid #f0d7ca;
+
+    border-radius: 99px;
+
+    color: var(--accent);
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 0.5px;
+
+    white-space: nowrap;
+}
+
+
+/* ==================================================
+   HERO TITLE
+================================================== */
+
+.hero h1 {
+    max-width: 700px;
+
+    margin: 18px 0;
+
+    color: var(--ink);
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: clamp(48px, 6vw, 78px);
+
+    font-weight: 700;
+
+    line-height: 0.98;
+
+    letter-spacing: -1.5px;
+}
+
+.hero h1 em {
+    color: var(--accent);
+
+    font-style: normal;
+}
+
+
+/* ==================================================
+   HERO DESCRIPTION
+================================================== */
+
+.hero-copy > p {
+    max-width: 560px;
+
+    margin: 0;
+
+    color: var(--muted);
+
+    font-size: 15px;
+
+    line-height: 1.8;
+}
+
+
+/* ==================================================
+   HERO ACTIONS
+================================================== */
+
+.hero-actions {
+    width: 100%;
+
+    margin-top: 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    /*
+     * Jarak tombol dengan toko offline.
+     */
+    gap: 55px;
+}
+
+
+/* ==================================================
+   PRIMARY BUTTON
+================================================== */
+
+.primary {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 48px;
+
+    padding: 14px 20px;
+
+    border-radius: 13px;
+
+    background: var(--ink);
+
+    color: var(--white);
+
+    font-size: 13px;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    white-space: nowrap;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.primary:hover {
+    background: #3b2c26;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(44, 33, 29, 0.12);
+}
+
+.primary:active {
+    transform: translateY(0);
+}
+
+
+/* ==================================================
+   STORE ADDRESS
+================================================== */
+
+.store-address {
+    min-width: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding-left: 28px;
+
+    border-left: 1px solid #dccbc2;
+
+    color: var(--muted);
+
+    line-height: 1.4;
+}
+
+.store-icon {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 24px;
+
+    font-size: 21px;
+
+    flex-shrink: 0;
+}
+
+.store-address strong {
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: var(--ink);
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+.store-address span:last-child {
+    display: block;
+
+    color: var(--muted);
+
+    font-size: 10px;
+
+    line-height: 1.4;
+}
+
+
+/* ==================================================
+   HERO ART
+================================================== */
+
+.hero-art {
+    position: relative;
+
+    width: 100%;
+
+    /*
+     * Tinggi foto desktop.
+     */
+    height: 390px;
+
+    display: grid;
+
+    place-items: center;
+
+    overflow: hidden;
+
+    /*
+     * Membulatkan keempat sudut.
+     */
+    border-radius: 28px;
+
+    /*
+     * Jarak tambahan antara
+     * konten dan foto.
+     */
+    margin-top: 25px;
+
+    background: #f6e4d8;
+
+    box-shadow:
+        0 25px 55px rgba(98, 69, 54, 0.10);
+}
+
+
+/* ==================================================
+   HERO VIDEO
+================================================== */
+
+.hero-video {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    border-radius: inherit;
+
+    /*
+     * Mencegah video keluar
+     * dari sudut rounded.
+     */
+    overflow: hidden;
+}
+
+
+/* ==================================================
+   HERO SPARK
+================================================== */
+
+.spark {
+    position: absolute;
+
+    color: var(--accent);
+
+    font-size: 35px;
+
+    line-height: 1;
+
+    pointer-events: none;
+
+    z-index: 3;
+}
+
+.s1 {
+    top: 15%;
+    left: 15%;
+}
+
+.s2 {
+    top: 12%;
+    right: 10%;
+}
+
+
+/* ==================================================
+   BADGE
+================================================== */
+
+.badge {
+    position: absolute;
+
+    right: 4%;
+    bottom: 8%;
+
+    width: 100px;
+    height: 100px;
+
+    display: grid;
+
+    place-content: center;
+
+    background: var(--white);
+
+    border-radius: 50%;
+
+    color: var(--accent);
+
+    font-size: 15px;
+    font-weight: 800;
+
+    line-height: 1.1;
+
+    text-align: center;
+
+    box-shadow:
+        0 10px 25px rgba(112, 69, 53, 0.14);
+
+    z-index: 4;
+}
+
+.badge small {
+    display: block;
+
+    margin-top: 3px;
+
+    color: var(--muted);
+
+    font-size: 9px;
+    font-weight: 500;
+}
+
+
+/* ==================================================
+   SECTION
+================================================== */
+
+.section {
+    padding: 90px 9vw;
+}
+
+
+/* ==================================================
+   SECTION HEADER
+================================================== */
+
+.section-head {
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    margin-bottom: 30px;
+}
+
+.section h2,
+.story h2 {
+    margin: 7px 0 0;
+
+    color: var(--ink);
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 42px;
+
+    font-weight: 700;
+
+    line-height: 1.1;
+}
+
+.eyebrow {
+    display: inline-block;
+
+    color: var(--accent);
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+/* ==================================================
+   FILTERS
+================================================== */
+
+.filters {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    flex-wrap: wrap;
+}
+
+.filter {
+    border: 1px solid var(--line);
+
+    background: var(--white);
+
+    border-radius: 99px;
+
+    padding: 9px 14px;
+
+    color: var(--muted);
+
+    font-size: 12px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.filter:hover {
+    border-color: #d9c6bc;
+
+    color: var(--ink);
+}
+
+.filter.active {
+    background: var(--ink);
+
+    border-color: var(--ink);
+
+    color: var(--white);
+}
+
+
+/* ==================================================
+   PRODUCT GRID
+================================================== */
+
+.grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 22px;
+}
+
+
+/* ==================================================
+   PRODUCT CARD
+================================================== */
+
+.card {
+    min-width: 0;
+
+    background: var(--white);
+
+    border: 1px solid var(--line);
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+
+    box-shadow: var(--shadow);
+}
+
+
+/* ==================================================
+   PRODUCT IMAGE
+================================================== */
+
+.pic {
+    width: 100%;
+
+    min-height: 0;
+
+    background: #f6e4d8;
+
+    overflow: hidden;
+
+    display: block;
+}
+
+.pic img {
+    width: 100%;
+    height: auto;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+.pic > span {
+    min-height: 220px;
+
+    display: grid;
+
+    place-items: center;
+
+    font-size: 90px;
+}
+
+.emoji-fallback {
+    display: grid;
+
+    place-items: center;
+
+    min-height: 220px;
+}
+
+
+/* ==================================================
+   PRODUCT INFO
+================================================== */
+
+.info {
+    padding: 14px 16px 16px;
+}
+
+.tag {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: var(--accent);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+.info h3 {
+    margin: 5px 0 5px;
+
+    color: var(--ink);
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 21px;
+
+    font-weight: 600;
+
+    line-height: 1.2;
+}
+
+.info p {
+    margin: 4px 0 8px;
+
+    color: var(--muted);
+
+    font-size: 12px;
+
+    line-height: 1.5;
+}
+
+
+/* ==================================================
+   STOCK
+================================================== */
+
+.stock-label {
+    margin: 6px 0 9px;
+
+    color: #5f7d67;
+
+    font-size: 11px;
+}
+
+.stock-label.out {
+    color: #a34f47;
+}
+
+
+/* ==================================================
+   PRODUCT ROW
+================================================== */
+
+.row {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 10px;
+
+    margin-top: 8px;
+}
+
+.price {
+    color: var(--ink);
+
+    font-size: 15px;
+
+    font-weight: 800;
+
+    white-space: nowrap;
+}
+
+
+/* ==================================================
+   PRODUCT BUTTON
+================================================== */
+
+.add {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 34px;
+
+    padding: 8px 11px;
+
+    border: 0;
+
+    border-radius: 9px;
+
+    background: var(--peach);
+
+    color: var(--ink);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        opacity 0.2s ease;
+}
+
+.add:hover {
+    background: #efc4b1;
+
+    transform: translateY(-1px);
+}
+
+.add:disabled,
+.add.disabled {
+    opacity: 0.5;
+
+    cursor: not-allowed;
+
+    background: #e9e2dd;
+
+    pointer-events: none;
+}
+
+
+/* ==================================================
+   EMPTY PRODUCTS
+================================================== */
+
+.empty-products {
+    grid-column: 1 / -1;
+
+    padding: 55px 20px;
+
+    background: var(--white);
+
+    border: 1px solid var(--line);
+
+    border-radius: 18px;
+
+    color: var(--muted);
+
+    text-align: center;
+}
+
+.empty-products h3 {
+    margin-top: 0;
+
+    color: var(--ink);
+
+    font-family:
+        "Playfair Display",
+        serif;
+}
+
+
+/* ==================================================
+   STORY
+================================================== */
+
+.story {
+    margin: 0 9vw 80px;
+
+    padding: 60px;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1fr);
+
+    align-items: center;
+
+    gap: 50px;
+
+    border-radius: 26px;
+
+    background: var(--ink);
+
+    color: var(--white);
+}
+
+.story .eyebrow {
+    color: var(--peach);
+}
+
+.story h2 {
+    color: var(--white);
+
+    line-height: 1.2;
+}
+
+.story p {
+    margin: 0;
+
+    color: #d9cbc5;
+
+    font-size: 14px;
+
+    line-height: 1.9;
+}
+
+
+/* ==================================================
+   MODAL
+================================================== */
+
+.modal {
+    position: fixed;
+
+    inset: 0;
+
+    padding: 20px;
+
+    display: grid;
+
+    place-items: center;
+
+    background: rgba(36, 24, 18, 0.47);
+
+    z-index: 1000;
+}
+
+.modal.hidden {
+    display: none;
+}
+
+.modal-card {
+    position: relative;
+
+    width: min(520px, 100%);
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    padding: 28px;
+
+    background: #fffdf9;
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 25px 70px rgba(36, 24, 18, 0.20);
+}
+
+.close {
+    position: absolute;
+
+    top: 10px;
+    right: 15px;
+
+    width: 38px;
+    height: 38px;
+
+    display: grid;
+
+    place-items: center;
+
+    border: 0;
+
+    background: transparent;
+
+    color: var(--muted);
+
+    font-size: 30px;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    border-radius: 50%;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+.close:hover {
+    background: #f4e9e2;
+
+    color: var(--ink);
+}
+
+.modal-card h2 {
+    margin-top: 0;
+
+    color: var(--ink);
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 32px;
+
+    line-height: 1.1;
+}
+
+
+/* ==================================================
+   FORM
+================================================== */
+
+.form {
+    display: grid;
+
+    gap: 12px;
+}
+
+.form input,
+.form select,
+.form textarea {
+    width: 100%;
+
+    padding: 13px 14px;
+
+    border: 1px solid var(--line);
+
+    border-radius: 10px;
+
+    background: var(--white);
+
+    color: var(--ink);
+
+    font-size: 13px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.form input:focus,
+.form select:focus,
+.form textarea:focus {
+    border-color: var(--accent);
+
+    box-shadow:
+        0 0 0 3px rgba(182, 93, 78, 0.08);
+}
+
+.form textarea {
+    min-height: 95px;
+
+    resize: vertical;
+}
+
+.form button,
+.formBtn {
+    width: 100%;
+
+    min-height: 45px;
+
+    padding: 13px 16px;
+
+    border: 0;
+
+    border-radius: 10px;
+
+    background: var(--ink);
+
+    color: var(--white);
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.form button:hover,
+.formBtn:hover {
+    background: #3b2c26;
+
+    transform: translateY(-1px);
+}
+
+.formBtn {
+    display: block;
+
+    margin-top: 10px;
+
+    text-align: center;
+
+    text-decoration: none;
+}
+
+
+/* ==================================================
+   CART
+================================================== */
+
+.cartline {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding: 13px 0;
+
+    border-bottom: 1px solid var(--line);
+
+    color: var(--muted);
+
+    font-size: 13px;
+}
+
+.cartline b {
+    color: var(--ink);
+}
+
+.qty {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+.qty button {
+    width: 28px;
+    height: 28px;
+
+    display: grid;
+
+    place-items: center;
+
+    padding: 0;
+
+    border: 1px solid var(--line);
+
+    background: var(--white);
+
+    border-radius: 6px;
+
+    color: var(--ink);
+
+    cursor: pointer;
+}
+
+.qty button:hover {
+    background: #fff6f0;
+
+    border-color: #d9c6bc;
+}
+
+.total {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin: 18px 0;
+
+    color: var(--ink);
+
+    font-size: 18px;
+
+    font-weight: 800;
+}
+
+
+/* ==================================================
+   SUCCESS
+================================================== */
+
+.success {
+    width: 58px;
+    height: 58px;
+
+    display: grid;
+
+    place-items: center;
+
+    margin-bottom: 15px;
+
+    border-radius: 50%;
+
+    background: #e4f2e6;
+
+    color: #4b8257;
+
+    font-size: 28px;
+
+    font-weight: 800;
+}
+
+
+/* ==================================================
+   TOAST
+================================================== */
+
+#toast {
+    position: fixed;
+
+    right: 22px;
+    bottom: 22px;
+
+    max-width: min(360px, calc(100vw - 30px));
+
+    padding: 13px 16px;
+
+    background: var(--ink);
+
+    color: var(--white);
+
+    border-radius: 11px;
+
+    font-size: 13px;
+
+    opacity: 0;
+
+    transform: translateY(10px);
+
+    pointer-events: none;
+
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease;
+
+    z-index: 2000;
+}
+
+#toast.show {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* ==================================================
+   FOOTER
+================================================== */
+
+.site-footer {
+    padding: 25px 9vw 35px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    color: #9a8b83;
+
+    font-size: 11px;
+}
+
+.site-footer a {
+    color: #9a8b83;
+
+    text-decoration: none;
+
+    transition: color 0.2s ease;
+}
+
+.site-footer a:hover {
+    color: var(--accent);
+}
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 1100px) {
+
+    .hero {
+        padding-left: 6vw;
+        padding-right: 6vw;
+
+        column-gap: 45px;
+    }
+
+    .hero h1 {
+        font-size: clamp(46px, 6vw, 64px);
+    }
+
+    .hero-actions {
+        gap: 35px;
+    }
+
+    .store-address {
+        padding-left: 20px;
+    }
+
+    .section {
+        padding-left: 6vw;
+        padding-right: 6vw;
+    }
+
+    .story {
+        margin-left: 6vw;
+        margin-right: 6vw;
+    }
+}
+
+
+/* ==================================================
+   TABLET / ONE COLUMN HERO
+================================================== */
+
+@media (max-width: 900px) {
+
+    .hero {
+        min-height: auto;
+
+        grid-template-columns: 1fr;
+
+        padding:
+            55px
+            6vw
+            60px;
+
+        /*
+         * Ini adalah jarak vertikal
+         * antara konten dengan foto.
+         */
+        row-gap: 55px;
+    }
+
+    .hero-copy {
+        width: 100%;
+    }
+
+    .hero-art {
+        width: 100%;
+
+        height: 320px;
+
+        margin-top: 0;
+
+        border-radius: 24px;
+    }
+
+    .hero-video {
+        border-radius: 24px;
+    }
+
+    .grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .story {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+
+        padding: 45px;
+    }
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 600px) {
+
+    /* ----------------------------------------------
+       BODY
+    ---------------------------------------------- */
+
+    body {
+        overflow-x: hidden;
+    }
+
+
+    /* ----------------------------------------------
+       NAVBAR
+    ---------------------------------------------- */
+
+    .topbar {
+        height: 64px;
+
+        padding: 0 15px;
+    }
+
+    .brand {
+        font-size: 21px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .actions {
+        gap: 6px;
+    }
+
+    .ghost,
+    .cart {
+        padding: 8px 10px;
+
+        border-radius: 10px;
+
+        font-size: 12px;
+    }
+
+
+    /* ----------------------------------------------
+       HERO
+    ---------------------------------------------- */
+
+    .hero {
+        min-height: auto;
+
+        padding:
+            35px
+            18px
+            45px;
+
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        /*
+         * GAP BESAR ANTARA KONTEN
+         * DAN FOTO.
+         */
+        row-gap: 40px;
+    }
+
+
+    /* ----------------------------------------------
+       HERO COPY
+    ---------------------------------------------- */
+
+    .hero-copy {
+        width: 100%;
+    }
+
+    .pill {
+        padding: 7px 11px;
+
+        font-size: 9px;
+
+        letter-spacing: 0.4px;
+    }
+
+    .hero h1 {
+        margin: 17px 0;
+
+        font-size: 43px;
+
+        line-height: 1;
+
+        letter-spacing: -0.8px;
+    }
+
+    .hero-copy > p {
+        max-width: 100%;
+
+        font-size: 13px;
+
+        line-height: 1.65;
+    }
+
+
+    /* ----------------------------------------------
+       HERO ACTIONS
+    ---------------------------------------------- */
+
+    .hero-actions {
+        width: 100%;
+
+        display: flex;
+
+        flex-direction: row;
+
+        align-items: center;
+
+        /*
+         * Jarak tombol dan alamat.
+         */
+        gap: 30px;
+
+        margin-top: 25px;
+    }
+
+    .primary {
+        min-height: 44px;
+
+        padding: 12px 15px;
+
+        font-size: 12px;
+    }
+
+
+    /* ----------------------------------------------
+       STORE ADDRESS
+    ---------------------------------------------- */
+
+    .store-address {
+        min-width: 0;
+
+        display: flex;
+
+        align-items: center;
+
+        gap: 8px;
+
+        padding-left: 18px;
+
+        border-left: 1px solid #dccbc2;
+    }
+
+    .store-icon {
+        width: 20px;
+
+        font-size: 18px;
+    }
+
+    .store-address strong {
+        margin-bottom: 2px;
+
+        font-size: 11px;
+
+        line-height: 1.2;
+    }
+
+    .store-address span:last-child {
+        font-size: 8px;
+
+        line-height: 1.3;
+
+        white-space: normal;
+    }
+
+
+    /* ----------------------------------------------
+       HERO ART
+    ---------------------------------------------- */
+
+    .hero-art {
+        width: 100%;
+
+        height: 210px;
+
+        /*
+         * Karena .hero sudah punya row-gap,
+         * foto tidak menempel dengan teks.
+         */
+        margin-top: 0;
+
+        border-radius: 18px;
+
+        overflow: hidden;
+    }
+
+    .hero-video {
+        width: 100%;
+
+        height: 100%;
+
+        display: block;
+
+        object-fit: cover;
+
+        border-radius: 18px;
+    }
+
+
+    /* ----------------------------------------------
+       HERO DECORATION
+    ---------------------------------------------- */
+
+    .spark {
+        font-size: 25px;
+    }
+
+    .s1 {
+        top: 12%;
+        left: 10%;
+    }
+
+    .s2 {
+        top: 10%;
+        right: 8%;
+    }
+
+    .badge {
+        width: 70px;
+
+        height: 70px;
+
+        right: 4%;
+
+        bottom: 7%;
+
+        font-size: 11px;
+    }
+
+    .badge small {
+        margin-top: 2px;
+
+        font-size: 8px;
+    }
+
+
+    /* ----------------------------------------------
+       SECTION
+    ---------------------------------------------- */
+
+    .section {
+        padding:
+            45px
+            15px;
+    }
+
+    .section-head {
+        display: block;
+
+        margin-bottom: 22px;
+    }
+
+    .section h2 {
+        margin-top: 6px;
+
+        font-size: 31px;
+    }
+
+
+    /* ----------------------------------------------
+       FILTERS
+    ---------------------------------------------- */
+
+    .filters {
+        width: 100%;
+
+        margin-top: 15px;
+
+        display: flex;
+
+        gap: 6px;
+
+        overflow-x: auto;
+
+        flex-wrap: nowrap;
+
+        padding-bottom: 5px;
+
+        scrollbar-width: none;
+    }
+
+    .filters::-webkit-scrollbar {
+        display: none;
+    }
+
+    .filter {
+        flex: 0 0 auto;
+
+        padding: 8px 12px;
+
+        font-size: 11px;
+    }
+
+
+    /* ----------------------------------------------
+       PRODUCT GRID
+    ---------------------------------------------- */
+
+    .grid {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+
+    /* ----------------------------------------------
+       PRODUCT CARD
+    ---------------------------------------------- */
+
+    .card {
+        border-radius: 17px;
+    }
+
+
+    /* ----------------------------------------------
+       PRODUCT IMAGE
+    ---------------------------------------------- */
+
+    .pic {
+        width: 100%;
+
+        height: auto;
+
+        overflow: hidden;
+    }
+
+    .pic img {
+        width: 100%;
+
+        height: auto;
+
+        display: block;
+    }
+
+    .pic > span,
+    .emoji-fallback {
+        min-height: 170px;
+
+        font-size: 70px;
+    }
+
+
+    /* ----------------------------------------------
+       PRODUCT INFO
+    ---------------------------------------------- */
+
+    .info {
+        padding: 12px 13px 14px;
+    }
+
+    .tag {
+        margin-bottom: 3px;
+
+        font-size: 9px;
+    }
+
+    .info h3 {
+        margin: 4px 0;
+
+        font-size: 18px;
+
+        line-height: 1.2;
+    }
+
+    .info p {
+        margin: 4px 0 7px;
+
+        font-size: 11px;
+
+        line-height: 1.4;
+    }
+
+    .stock-label {
+        margin: 4px 0 7px;
+
+        font-size: 10px;
+    }
+
+
+    /* ----------------------------------------------
+       PRICE + BUTTON
+    ---------------------------------------------- */
+
+    .row {
+        gap: 8px;
+
+        margin-top: 5px;
+    }
+
+    .price {
+        font-size: 14px;
+    }
+
+    .add {
+        min-height: 32px;
+
+        padding: 8px 10px;
+
+        border-radius: 8px;
+
+        font-size: 10px;
+    }
+
+
+    /* ----------------------------------------------
+       STORY
+    ---------------------------------------------- */
+
+    .story {
+        margin:
+            0
+            15px
+            35px;
+
+        padding:
+            28px
+            20px;
+
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+
+        border-radius: 20px;
+    }
+
+    .story h2 {
+        margin-top: 6px;
+
+        font-size: 29px;
+
+        line-height: 1.2;
+    }
+
+    .story p {
+        font-size: 13px;
+
+        line-height: 1.7;
+    }
+
+
+    /* ----------------------------------------------
+       MODAL
+    ---------------------------------------------- */
+
+    .modal {
+        padding: 10px;
+    }
+
+    .modal-card {
+        width: 100%;
+
+        max-height: 92vh;
+
+        padding:
+            22px
+            17px;
+
+        border-radius: 18px;
+    }
+
+    .modal-card h2 {
+        font-size: 28px;
+    }
+
+
+    /* ----------------------------------------------
+       CART
+    ---------------------------------------------- */
+
+    .cartline {
+        gap: 8px;
+
+        font-size: 12px;
+    }
+
+    .qty {
+        gap: 6px;
+    }
+
+    .qty button {
+        width: 27px;
+        height: 27px;
+    }
+
+    .total {
+        font-size: 16px;
+    }
+
+
+    /* ----------------------------------------------
+       TOAST
+    ---------------------------------------------- */
+
+    #toast {
+        right: 15px;
+
+        bottom: 15px;
+
+        max-width:
+            calc(100vw - 30px);
+    }
+
+
+    /* ----------------------------------------------
+       FOOTER
+    ---------------------------------------------- */
+
+    .site-footer {
+        padding:
+            20px
+            15px
+            30px;
+
+        font-size: 10px;
+    }
+}
+
+
+/* ==================================================
+   SMALL MOBILE
+================================================== */
+
+@media (max-width: 390px) {
+
+    .hero {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .hero h1 {
+        font-size: 39px;
+    }
+
+    .hero-actions {
+        gap: 18px;
+    }
+
+    .primary {
+        padding-left: 12px;
+        padding-right: 12px;
+
+        font-size: 11px;
+    }
+
+    .store-address {
+        padding-left: 14px;
+
+        gap: 6px;
+    }
+
+    .store-address strong {
+        font-size: 10px;
+    }
+
+    .store-address span:last-child {
+        font-size: 8px;
+    }
+
+    .hero-art {
+        height: 190px;
+    }
+}

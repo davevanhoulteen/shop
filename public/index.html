@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+    >
+
+    <title>SariLegit — Toko Kue Online</title>
+
+    <link
+        rel="stylesheet"
+        href="/style.css"
+    >
+</head>
+
+
+<body>
+
+    <!-- ==================================================
+         NAVBAR
+    ================================================== -->
+
+    <header class="topbar">
+
+        <a
+            class="brand"
+            href="/"
+            aria-label="SariLegit"
+        >
+            𝐒𝐀𝐑𝐈<span>𝐋𝐄𝐆𝐈𝐓</span>
+        </a>
+
+
+        <nav aria-label="Navigasi utama">
+
+            <a href="#produk">
+                Produk
+            </a>
+
+            <a href="#tentang">
+                Tentang
+            </a>
+
+        </nav>
+
+
+        <div class="actions">
+
+            <button
+                class="ghost"
+                id="loginBtn"
+                type="button"
+            >
+                Pesanan
+            </button>
+
+
+            <button
+                class="cart"
+                id="cartBtn"
+                type="button"
+            >
+                🛒
+                <b id="cartCount">0</b>
+            </button>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ==================================================
+         MAIN
+    ================================================== -->
+
+    <main>
+
+
+        <!-- ==================================================
+             HERO
+        ================================================== -->
+
+        <section class="hero">
+
+            <!-- HERO TEXT -->
+
+            <div class="hero-copy">
+
+                <div class="pill">
+                    ✨ Freshly baked every day
+                </div>
+
+
+                <h1>
+                    Kue manis untuk
+                    <em>momen istimewa.</em>
+                </h1>
+
+
+                <p>
+                    Koleksi cake, pastry, dan dessert rumahan
+                    dengan bahan pilihan. Pesan online, kami
+                    siapkan dengan sepenuh hati.
+                </p>
+
+
+                <!-- ==================================================
+                     HERO ACTIONS
+                ================================================== -->
+
+                <div class="hero-actions">
+
+                    <a
+                        href="#produk"
+                        class="primary"
+                    >
+                        Belanja Sekarang →
+                    </a>
+
+
+                    <!-- TOKO OFFLINE -->
+
+                    <div class="store-address">
+
+                        <span
+                            class="store-icon"
+                            aria-hidden="true"
+                        >
+                            📍
+                        </span>
+
+
+                        <div>
+
+                            <strong>
+                                OFFLINE STORE
+                            </strong>
+
+                            <span>
+                                Jalan Raja Limbangan Tengah
+                                (Depan SPBU)
+                                Blubur Limbangan Garut
+                                Blubur Limbangan, Kab. Garut
+                                Jawa Barat, 44186
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ==================================================
+                 HERO FOTO / VIDEO
+            ================================================== -->
+
+            <div class="hero-art">
+
+                <video
+                    class="hero-video"
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                    preload="auto"
+                    aria-label="Video produk SariLegit"
+                >
+
+                    <source
+                        src="/hero-video.mp4"
+                        type="video/mp4"
+                    >
+
+                    Browser kamu tidak mendukung video.
+
+                </video>
+
+
+                <!-- DEKORASI -->
+
+                <div
+                    class="spark s1"
+                    aria-hidden="true"
+                >
+                    ✦
+                </div>
+
+
+                <div
+                    class="spark s2"
+                    aria-hidden="true"
+                >
+                    ✧
+                </div>
+
+
+                <!-- BADGE -->
+
+                <div class="badge">
+
+                    100%
+
+                    <small>
+                        fresh baked
+                    </small>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================================================
+             PRODUK
+        ================================================== -->
+
+        <section
+            class="section"
+            id="produk"
+        >
+
+            <div class="section-head">
+
+
+                <!-- JUDUL PRODUK -->
+
+                <div>
+
+                    <span class="eyebrow">
+                        OUR MENU
+                    </span>
+
+
+                    <h2>
+                        Best Seller
+                    </h2>
+
+                </div>
+
+
+                <!-- FILTER PRODUK -->
+
+                <div
+                    id="filters"
+                    class="filters"
+                ></div>
+
+            </div>
+
+
+            <!-- DAFTAR PRODUK -->
+
+            <div
+                id="products"
+                class="grid"
+            ></div>
+
+        </section>
+
+
+
+        <!-- ==================================================
+             TENTANG
+        ================================================== -->
+
+        <section
+            class="story"
+            id="tentang"
+        >
+
+            <div>
+
+                <span class="eyebrow">
+                    MADE WITH LOVE
+                </span>
+
+
+                <h2>
+                    Lengkapi momen bahagiamu,
+                    <br>
+                    ditemani dengan kue yang istimewa.
+                </h2>
+
+            </div>
+
+
+            <p>
+                Kami memanggang dalam batch kecil agar
+                setiap pesanan terasa seperti dibuat khusus
+                untukmu. Cocok untuk ulang tahun, hadiah,
+                maupun teman ngopi sore.
+            </p>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- ==================================================
+         FOOTER
+    ================================================== -->
+
+    <footer class="site-footer">
+
+        <span>
+            © 2026 SariLegit
+        </span>
+
+
+        <a href="/admin-login.html">
+            Admin
+        </a>
+
+    </footer>
+
+
+
+    <!-- ==================================================
+         MODAL
+    ================================================== -->
+
+    <div
+        id="modal"
+        class="modal hidden"
+    >
+
+        <div class="modal-card">
+
+            <button
+                class="close"
+                id="closeModal"
+                type="button"
+                aria-label="Tutup"
+            >
+                ×
+            </button>
+
+
+            <div id="modalContent"></div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ==================================================
+         TOAST
+    ================================================== -->
+
+    <div id="toast"></div>
+
+
+
+    <!-- ==================================================
+         JAVASCRIPT
+    ================================================== -->
+
+    <script src="/app.js"></script>
+
+</body>
+
+</html>
