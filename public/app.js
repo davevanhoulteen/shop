@@ -180,7 +180,7 @@ function renderProducts() {
 
               <a
                 class="add"
-                href="https://wa.me/6289669451796?text=${encodeURIComponent(
+                href="https://wa.me/6285776071101?text=${encodeURIComponent(
                   `Halo SariLegit, saya ingin memesan ${p.name} dengan harga ${rupiah(p.price)}.`
                 )}"
                 target="_blank"
